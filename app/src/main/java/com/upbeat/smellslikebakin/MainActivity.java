@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.onRe
         viewPagerFragment.setArguments(bundle);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.placeHolder, viewPagerFragment);
+        fragmentTransaction.replace(R.id.placeHolder, viewPagerFragment, VIEWPAGER_FRAGMENT);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
