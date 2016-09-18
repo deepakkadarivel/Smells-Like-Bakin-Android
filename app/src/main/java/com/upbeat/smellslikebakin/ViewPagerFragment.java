@@ -21,6 +21,9 @@ public class ViewPagerFragment extends Fragment {
         getActivity().setTitle(Recipes.names[index]);
 
         final IngredientsFragment ingredientsFragment = new IngredientsFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(KEY_RECIPE_INDEX, index);
+        ingredientsFragment.setArguments(bundle);
         final DirectionsFragment directionsFragment = new DirectionsFragment();
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
